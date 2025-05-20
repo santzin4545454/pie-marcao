@@ -166,6 +166,15 @@ button.proximo{
         transition:  2s;
     }
 }
+@media(max-width:375px){
+    .imgbeneficios{
+        transform: scale(0.39);
+        position: relative;
+        right: 77px;
+        transition:  2s;
+        bottom: 5px;
+    }
+}
 .imgbeneficios{
     transition: transform 0.5s ease-in-out;
 }
