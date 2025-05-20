@@ -8,7 +8,7 @@ body {
     margin: 0px;
 }
 header{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
     height: 180px;
     justify-content: space-between;
     position: fixed;
@@ -16,6 +16,7 @@ header{
     z-index: 1000;
     left: 0;
     width: 100%;
+    min-width:320px ;
     
 }
 #over{
@@ -41,6 +42,7 @@ header{
     background-color:rgb(6, 89, 162) ;
     color: white;
     border-radius: 5px;
+    display: flex;
 }
 #barradebusca{
     position: absolute;
@@ -51,6 +53,7 @@ header{
 
 }
 #ibuscar{
+    
     border-radius: 5px;
     height: 20px;
     text-align: center;
@@ -85,9 +88,10 @@ header{
 main{
     margin: auto;
     position: relative;
-    width: 1200px;
     justify-items: center;
     justify-content: center;
+    max-width: 1200px;
+    min-width: 320px;
 
 }
 
@@ -140,17 +144,30 @@ button.proximo{
     display: flex;
     position: relative;
     justify-content: center;
+    width: 100%;
 }
 .beneficios{
     position: relative;
     justify-items: center;
+    max-width: 250px;
+    min-width: 100px;
     margin: 10px;
-    width: 257px;
     height: 101px;
     background-color: #1584EB;
     border-radius: 50px;
     transition: transform 0.5s ease-in-out;
     transition: box-shadow 0.5s ease-in-out;
+}
+@media(max-width:824px){
+    .imgbeneficios{
+        transform: scale(0.7);
+        position: relative;
+        right: 38px;
+        transition:  2s;
+    }
+}
+.imgbeneficios{
+    transition: transform 0.5s ease-in-out;
 }
 .beneficios:hover{
     transform: scale(1.04);
@@ -170,10 +187,26 @@ button.proximo{
     position: relative;
     top: 200px;
     width: 1200px;
+    min-width: 300px;
     display: flex;
     gap: 10px;
     padding: 10px;
     overflow: scroll;
+}
+@media(max-width:1238px){
+    #ofertasimbativeis{
+        width: 850px;
+    }
+}
+@media(max-width:889px){
+    #ofertasimbativeis{
+        width: 550px;
+    }
+}
+@media(max-width:796px){
+    #ofertasimbativeis{
+        width: 450px;
+    }
 }
 .containerofertas{
     cursor: pointer;
