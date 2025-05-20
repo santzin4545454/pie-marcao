@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+*{
+    margin: 0px;
+}
+header{
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+    
+}
+#over{
+    justify-items: center;
+    background-color: black;
+    color: white;
+
+}
+
+#logo{
+    top: 20px;
+    margin: auto;
+    display: block;
+    position: relative;
+
+}
+#carrinho{
+    position: absolute;
+    top: 25px;
+    height: 35px;
+}
+#botaodebusca{
+    background-color:rgb(6, 89, 162) ;
+    color: white;
+    border-radius: 5px;
+}
+#barradebusca{
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    right: 50px;
+    top: 25px; 
+
+}
+#ibuscar{
+    border-radius: 5px;
+    height: 20px;
+    text-align: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#menu{
+    top: 30px;
+    position: relative;
+}
+#menu>ul{
+    justify-content: center;
+    top: 40px;
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    font-size: x-large;
+
+}
+#menu>ul>a:hover{
+    background-color: rgb(51, 160, 255);
+    transition-duration: 0.3s;
+
+}
+#menu>ul>a{
+    padding: 6px;
+    background-color:  rgb(6, 89, 162);
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+main{
+    margin: auto;
+    position: relative;
+    width: 1200px;
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.carrossel{
+    top: 200px;
+    width: 100%;
+    height: 400px; 
+    position: relative;
+    overflow: hidden;
+}
+.slides{
+    display: flex;
+}
+.slide{
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+}
+.slide.ativa{
+    opacity: 1;
+}
+button.anterior,
+button.proximo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    font-size: 2rem;
+    padding: 0 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+button.anterior{
+    left: 10px;
+}
+button.proximo{
+    right: 10px;
+}
+#areabeneficios{
+    top: 200px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.beneficios{
+    position: relative;
+    justify-items: center;
+    margin: 10px;
+    width: 257px;
+    height: 101px;
+    background-color: #1584EB;
+    border-radius: 50px;
+    transition: transform 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+}
+.beneficios:hover{
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in-out;
+    background-color:rgb(51, 160, 255);
+    transition: 0.3s;
+    box-shadow: 0px 1px 3px 1px black; 
+    cursor: pointer;
+    
+}
+#textoofertasimbativeis{
+    position: relative;
+    top: 200px;
+    font-weight: bold;
+}
+#ofertasimbativeis{
+    position: relative;
+    top: 200px;
+    width: 1200px;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    overflow: scroll;
+}
+.containerofertas{
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.346);;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    justify-items: center;
+    justify-content: flex-end;
+    align-items: center;
+    height: 380px;
+    
+}
+.ofertas{
+    padding: 5px;
+    width: 200px;
+    height: 210px;
+    transition: transform 0.3s ease-in-out;
+}
+.desconto{
+    text-align: center;
+    width: 205px;
+    position: relative;
+    bottom: 6px;
+    border-radius: 5px;
+    border: 3px solid rgba(1, 183, 255, 0.572);
+    color: rgb(1, 183, 255) ;
+
+}
+.ofertas:hover{
+    transform: scale(1.04);
+    transition: transform 0.3s ease-in-out;
+}
+.nome{
+    text-align: center;
+    width: 190px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.346);;
+    font-size:medium ;
+    font-weight: 300;
+}
+.precocontainer{
+    width: 190px;
+    text-align: left;
+}
+.precoantigocontainer{
+    display: flex;
+}
+.precoantigo{
+    text-decoration: line-through;
+}
+.precoatualcontainer{
+    display: flex;
+}
+.por{
+    top: 9px;
+    position: relative;
+}
+.precoatual{
+    color: #1584EB;
+    font-size: xx-large;
+}
+.pixouboletocontainer{
+    text-align: center;
+}
+.parcelandocontainer{
+    text-align: center;
+    width: 190px;
+    display: flex;
+
+}
+.precoparcela{
+    text-align: center;
+    width: 190px;
+    color: #1584EB;
+}
+
+
