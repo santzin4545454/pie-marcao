@@ -3,58 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fitCore</title>
+    <title>fit-Core</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scrip.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div id="over"><p>•Os melhores suplementos do país•</p></div>
-        <img id="logo" src="images/logo/logo.png" alt="">
-        <img id="carrinho" src="images/carrinho.png" alt="">
-        <div id="barradebusca">
-            <form action="/buscar">
-                <p><label for="ibuscar"></label></p>
-                <input type="text" name="buscar" id="ibuscar" placeholder="O que você procura?">
-                <input id="botaodebusca" type="submit" value="Buscar">
-            </form>
-        </div>
+        <div id="overlay"><p>OS MELHORES SUPLEMENTOS DO PAÍS</p></div>
+        <div id="containerlogo"> <img id="logo" src="log/logo.png" alt=""></div>
+        <div id="containercarrinho"><img id="carrinho" src="cart_11919184.png" alt=""></div>
         <nav id="menu">
-            <ul>
-                <a href="index.html">HOME</a>
-                <a href="">CATEGORIAS</a>
-                <a href="">OBJETIVOS</a>
-                <a href="">CREATINAS</a>
-                <a href="">WHEYS</a>
-                <a href="">OUTROS</a>
-                
-
+            <ul id="containermenu">
+                <li class="containeropcao"><a href="#">CATEGORIAS</a></li>
+                <li class="containeropcao"><a href="#">WHEYS</a></li>
+                <li class="containeropcao"><a href="#">HIPERCALÓRICOS</a></li>
+                <li class="containeropcao"><a href="#">PRÉ-TREINOS</a></li>
+                <li class="containeropcao"><a href="#">OUTROS</a></li>
             </ul>
         </nav>
-
     </header>
- <div class="carrossel">
+    <div class="carrossel">
             
             <div class="slides">
-                <img src="images/carrossel/0f32e77c-648b-4ad6-aad2-be1311c59ca8___56e7ffad21e805044b14e758c8ebf202.webp" alt="image 1" class="slide ativa">
-                <img src="images/carrossel/659147a3-ce1e-437f-80cd-efa39eabbba0___b2c21773e46b211f1140a29b8a682bc3.webp" alt="imagem 2" class="slide">
-                <img src="images/carrossel/e9fa57f1-873f-4a7d-97e0-5e05e8afcc3d___ea0f7683e39d2b43b25cea55ec3f9709.webp" alt="imagem 3" class="slide">
+                <img src="carrossel/0f32e77c-648b-4ad6-aad2-be1311c59ca8___56e7ffad21e805044b14e758c8ebf202.webp" alt="image 1" class="slide ativa">
+                <img src="carrossel/659147a3-ce1e-437f-80cd-efa39eabbba0___b2c21773e46b211f1140a29b8a682bc3.webp" alt="imagem 2" class="slide">
+                <img src="carrossel/e9fa57f1-873f-4a7d-97e0-5e05e8afcc3d___ea0f7683e39d2b43b25cea55ec3f9709.webp" alt="imagem 3" class="slide">
             </div>
             <button class="anterior">&#10094;</button>
             <button class="proximo">&#10095;</button>
 
         </div>
     <main>
-       
+    <div id="areadebeneficios">
+        <div class="beneficio"><img src="benefícios/desconto.png" alt=""></div>
+        <div class="beneficio"><img src="benefícios/parcela.png" alt=""></div>
+        <div class="beneficio"><img src="benefícios/Sem título.png" alt=""></div>
+    </div>
+    <div id="textoofertas">OFERTAS IMBATÍVEIS</div>
 
-        <div id="areabeneficios">
-            <div class="beneficios"><img class="imgbeneficios" src="images/benefícios/Sem título.png" alt=""></div>
-            <div class="beneficios"><img class="imgbeneficios" src="images/benefícios/desconto.png" alt=""></div>
-            <div  class="beneficios"><img class="imgbeneficios" src="images/benefícios/parcela.png" alt=""></div>
-        </div>
-        <div id="textoofertasimbativeis"><h1>Ofertas Imbatíveis</h1>
-        </div>
-        <div id="ofertasimbativeis">
+    <div id="ofertasimbativeis">
             
             <div class="containerofertas"> 
                 <img class="ofertas" src="https://www.gsuplementos.com.br/upload/produto/imagem/m_top-whey-protein-concentrado-1kg-growth-supplements-19.webp" alt="">
@@ -90,6 +77,12 @@
                         
 
                     </div>
+                    <div class="addaocarrinhocontainer">
+                    <img class="addaocarrinho" src="addaocarrinho.png" alt="">
+                    <p class="textoaddcarrinho">Adicionar ao carrinho</p>
+
+
+                </div>
                 </div>
             </div>
 
@@ -129,6 +122,12 @@
                         
 
                     </div>
+                </div>
+                <div class="addaocarrinhocontainer">
+                    <img class="addaocarrinho" src="addaocarrinho.png" alt="">
+                    <p class="textoaddcarrinho">Adicionar ao carrinho</p>
+
+
                 </div>
                 
             </div>
@@ -196,9 +195,10 @@
 
 
         </div>
+        <h1>koskonascnosca</h1>
+
 
     </main>
-
     <footer>
 
     </footer>
