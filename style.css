@@ -5,98 +5,64 @@ body {
   font-style: normal;
 }
 *{
-    margin: 0px;
+    margin:0;
 }
 header{
-    background-color: rgb(255, 0, 0);
-    height: 180px;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    left: 0;
-    width: 100%;
-    min-width:320px ;
-    
-}
-#over{
-    justify-items: center;
-    background-color: black;
-    color: white;
-
-}
-
-#logo{
-    top: 20px;
-    margin: auto;
-    display: block;
+    margin: 0 auto;
     position: relative;
+    height: 180px;
+}
 
+#overlay{
+    margin: 0px 0px 15px 0px;
+    color: white;
+    justify-items: center;
+    background-color: #261B17;
+}
+#containerlogo{
+    justify-content: center;
+}
+#logo{
+    
+    display: block;
+    margin: 0 auto;
+}
+#containercarrinho{
+    position: absolute;
+    top: 35px;
+    
 }
 #carrinho{
-    position: absolute;
-    top: 25px;
-    height: 35px;
+    height: 40px;
 }
-#botaodebusca{
-    background-color:rgb(6, 89, 162) ;
-    color: white;
-    border-radius: 5px;
+#containermenu{
+    margin: 0 auto;
     display: flex;
-}
-#barradebusca{
     position: absolute;
-    display: flex;
-    justify-content: right;
-    right: 50px;
-    top: 25px; 
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
 
 }
-#ibuscar{
-    
-    border-radius: 5px;
-    height: 20px;
-    text-align: center;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-#menu{
-    top: 30px;
-    position: relative;
-}
-#menu>ul{
-    justify-content: center;
-    top: 40px;
-    display: flex;
+.containeropcao{
+    margin: 8px;
     list-style-type: none;
-    gap: 10px;
-    font-size: x-large;
-
+    white-space: nowrap;
 }
-#menu>ul>a:hover{
-    background-color: rgb(51, 160, 255);
-    transition-duration: 0.3s;
-
-}
-#menu>ul>a{
-    padding: 6px;
-    background-color:  rgb(6, 89, 162);
+.containeropcao>a{
+    background-color: rgb(6, 89, 162);
+    padding: 5px;
     color: white;
-    margin: 5px;
-    border-radius: 5px;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: x-large;
 }
-main{
-    margin: auto;
-    position: relative;
-    justify-items: center;
-    justify-content: center;
-    max-width: 1200px;
-    min-width: 320px;
-
+.containeropcao>a:hover{
+    background-color: rgb(100, 183, 255);
+    transition-duration: 0.3s;
 }
-
 .carrossel{
-    top: 200px;
+    top: 0px;
     width: 100%;
     height: 400px; 
     position: relative;
@@ -139,158 +105,81 @@ button.anterior{
 button.proximo{
     right: 10px;
 }
-#areabeneficios{
-    top: 200px;
+#areadebeneficios{
     display: flex;
-    position: relative;
     justify-content: center;
-    width: 100%;
 }
-.beneficios{
-    position: relative;
-    justify-items: center;
-    max-width: 250px;
-    min-width: 100px;
-    margin: 10px;
-    height: 101px;
-    background-color: #1584EB;
-    border-radius: 50px;
-    transition: transform 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
+.beneficio{
+    margin: 15px 20px;
+    background-color: rgb(6, 89, 162);
+    width: 280px;
+    justify-content: center;
+    border-radius: 55px;
+    transition: transform 0.2s 
 }
-@media(max-width:824px){
-    .imgbeneficios{
-        transform: scale(0.7);
-        position: relative;
-        right: 38px;
-        transition:  2s;
-    }
+.beneficio>img{
+    display: flex;
 }
-@media(max-width:375px){
-    .imgbeneficios{
-        transform: scale(0.39);
-        position: relative;
-        right: 77px;
-        transition:  2s;
-        bottom: 5px;
-    }
+.beneficio:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
 }
-.imgbeneficios{
-    transition: transform 0.5s ease-in-out;
-}
-.beneficios:hover{
-    transform: scale(1.04);
-    transition: transform 0.3s ease-in-out;
-    background-color:rgb(51, 160, 255);
-    transition: 0.3s;
-    box-shadow: 0px 1px 3px 1px black; 
-    cursor: pointer;
-    
-}
-#textoofertasimbativeis{
-    position: relative;
-    top: 200px;
-    font-weight: bold;
+#textoofertas{
+    text-align: center;
+    font-size: xx-large;
 }
 #ofertasimbativeis{
-    position: relative;
-    top: 200px;
-    width: 1200px;
-    min-width: 300px;
     display: flex;
-    gap: 10px;
-    padding: 10px;
     overflow: scroll;
 }
-@media(max-width:1238px){
-    #ofertasimbativeis{
-        width: 850px;
-    }
-}
-@media(max-width:889px){
-    #ofertasimbativeis{
-        width: 550px;
-    }
-}
-@media(max-width:796px){
-    #ofertasimbativeis{
-        width: 450px;
-    }
-}
 .containerofertas{
-    cursor: pointer;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.346);;
-    background-color: rgb(255, 255, 255);
+    margin: 0px 30px;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.346);
+    height: 450px;
     margin: 10px;
-    justify-items: center;
-    justify-content: flex-end;
-    align-items: center;
-    height: 380px;
     
 }
 .ofertas{
     padding: 5px;
-    width: 200px;
-    height: 210px;
+    height: 250px;
     transition: transform 0.3s ease-in-out;
-}
-.desconto{
-    text-align: center;
-    width: 205px;
-    position: relative;
-    bottom: 6px;
-    border-radius: 5px;
-    border: 3px solid rgba(1, 183, 255, 0.572);
-    color: rgb(1, 183, 255) ;
-
 }
 .ofertas:hover{
     transform: scale(1.04);
     transition: transform 0.3s ease-in-out;
 }
-.nome{
+.nome, .precoparcela{
     text-align: center;
-    width: 190px;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.346);;
-    font-size:medium ;
-    font-weight: 300;
+    
 }
-.precocontainer{
-    width: 190px;
-    text-align: left;
-}
-.precoantigocontainer{
+
+.precoantigocontainer,
+.precoatualcontainer,.pixouboletocontainer{
     display: flex;
+    padding: 0px 5px;
 }
 .precoantigo{
     text-decoration: line-through;
 }
-.precoatualcontainer{
-    display: flex;
-}
 .por{
-    top: 9px;
     position: relative;
+    top: 10px;
 }
-.precoatual{
-    color: #1584EB;
-    font-size: xx-large;
+.precoatual,.precoparcela{
+    font-size: x-large;
+    color:rgb(6, 89, 162); 
 }
-.pixouboletocontainer{
-    text-align: center;
-}
-.parcelandocontainer{
-    text-align: center;
-    width: 190px;
+.addaocarrinhocontainer{
+    background-color:rgb(6, 89, 162) ;
     display: flex;
-
+    justify-content: center;
+    align-items: center;
 }
-.precoparcela{
-    text-align: center;
-    width: 190px;
-    color: #1584EB;
+.addaocarrinho{
+    padding: 3px;
+    height: 30px;
 }
-
-
+.textoaddcarrinho{
+    color: white;
+    font-size: larger;
+}
