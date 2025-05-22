@@ -131,10 +131,10 @@ button.proximo{
     margin: 15px 0px;
 }
 .beneftelasmenores{
-    color: wheat;
+    color: rgb(255, 255, 255);
     padding: 15 5px;
     text-align: center;
-    background-color: #261B17;
+    background-color: rgb(6, 89, 162);
     margin: 0px 15px;
     padding: 5px;
     border-radius: 5px;
@@ -146,20 +146,35 @@ button.proximo{
     #benefmenores{
         display: flex;
     }
-    #containermenu{
-        display: none;
+    #logo{
+        height: 60px;
     }
+    
+    #carrinho{
+        height: 50px;
+        
+    }
+    
+}
+@media (max-width:375px) {
     #logo{
         height: 50px;
-    }
-    header{
-        height: 130px;
     }
     #carrinho{
         height: 30px;
         
     }
-    
+    .beneftelasmenores{
+        font-size: medium;
+        transition: font-size 0.3s ease-in-out;
+    }
+    #containermenu{
+        display: none;
+    }
+    header{
+        height: 130px;
+    }
+
 }
 #textoofertas{
     text-align: center;
