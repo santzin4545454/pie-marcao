@@ -25,3 +25,37 @@ setInterval(() => {
   slideatual = (slideatual + 1) % slides.length;
   mostrarSlide(slideatual);
 }, 4000);
+
+class menutelapequena{
+    constructor(menumobile, listnav, navlinks){
+        this.menumobile = document.querySelector(menumobile);
+        this.listnav = document.querySelector(listnav);
+        this.navlinks = document.querySelectorAll(navlinks);
+        this.activeclass = "active";
+
+        this.Handleclick=this.Handleclick.bind(this);
+    }
+
+    Handleclick(){
+        console.log(this);
+        this.listnav.classList.toggle(this.activeclass);
+    }
+
+    addClickEvent(){
+        this.menumobile.addEventListener("click", this.Handleclick );
+    }
+
+    init(){
+        if(this.menumobile){
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const menumobile = new menutelapequena(
+    "#hamburguerimg",
+    "#containermenu",
+    "#containermenu li",
+);
+menumobile.init();
