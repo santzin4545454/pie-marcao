@@ -19,6 +19,15 @@ header{
     justify-items: center;
     background-color: #261B17;
 }
+#hamburguerimg{
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    
+}
+#hamburguerimg:hover{
+    cursor: pointer;
+}
 #containerlogo{
     justify-content: center;
 }
@@ -30,11 +39,11 @@ header{
 #containercarrinho{
     position: absolute;
     top: 30px;
-    right: 2px;
+    right: 5px;
     
 }
 #carrinho{
-    height: 40px;
+    height: 60px;
 }
 #containermenu{
     margin: 0 auto;
@@ -43,6 +52,8 @@ header{
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
+    transition: transform 0.3s ease-in;
+    
 
 }
 .containeropcao{
@@ -57,12 +68,14 @@ header{
     text-decoration: none;
     border-radius: 5px;
     font-size: x-large;
+    
 }
 .containeropcao>a:hover{
     background-color: rgb(100, 183, 255);
     transition-duration: 0.3s;
 }
 .carrossel{
+    z-index: 1;
     top: 0px;
     width: 100%;
     height: 400px; 
@@ -117,7 +130,7 @@ button.proximo{
     width: 280px;
     justify-content: center;
     border-radius: 55px;
-    transition: transform 0.2s 
+    transition: transform 0.2s;
 }
 .beneficio>img{
     display: flex;
@@ -149,10 +162,30 @@ button.proximo{
     #logo{
         height: 60px;
     }
-    
+    #containermenu{
+        height: 500px;
+        width: 300px;
+        position: absolute;
+        left:150px;
+        transform: translateX(-200%);
+        flex-direction: column;
+        z-index: 2;
+        top: 20px;
+        padding: 0px;
+        background-color: #261B17;
+        align-items: center;
+        
+    }
+    #hamburguerimg{
+        position: absolute;
+        z-index: 3;
+    }
     #carrinho{
         height: 50px;
         
+    }
+    header{
+        height: 160px;
     }
     
 }
@@ -168,13 +201,13 @@ button.proximo{
         font-size: medium;
         transition: font-size 0.3s ease-in-out;
     }
-    #containermenu{
-        display: none;
-    }
     header{
         height: 130px;
     }
-
+    
+}
+#containermenu.active{
+    transform: translateX(-50%);
 }
 #textoofertas{
     text-align: center;
