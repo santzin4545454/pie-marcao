@@ -29,7 +29,8 @@ header{
 }
 #containercarrinho{
     position: absolute;
-    top: 35px;
+    top: 30px;
+    right: 2px;
     
 }
 #carrinho{
@@ -145,6 +146,20 @@ button.proximo{
     #benefmenores{
         display: flex;
     }
+    #containermenu{
+        display: none;
+    }
+    #logo{
+        height: 50px;
+    }
+    header{
+        height: 130px;
+    }
+    #carrinho{
+        height: 30px;
+        
+    }
+    
 }
 #textoofertas{
     text-align: center;
