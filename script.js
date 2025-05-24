@@ -59,3 +59,8 @@ const menumobile = new menutelapequena(
     "#containermenu li",
 );
 menumobile.init();
+const btnFecharMenu = document.querySelector("#xis");
+
+btnFecharMenu.addEventListener("click", () => {
+    document.querySelector("#containermenu").classList.remove("active");
+});
