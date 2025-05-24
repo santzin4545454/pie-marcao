@@ -23,10 +23,11 @@ header{
     height: 50px;
     position: absolute;
     top: 25px;
-    
+    display: none;
 }
 #hamburguerimg:hover{
     cursor: pointer;
+    
 }
 #containerlogo{
     justify-content: center;
@@ -35,6 +36,9 @@ header{
     
     display: block;
     margin: 0 auto;
+}
+#logomenu{
+    display: none;
 }
 #containercarrinho{
     position: absolute;
@@ -46,22 +50,24 @@ header{
     height: 60px;
 }
 #containermenu{
-    margin: 0 auto;
     display: flex;
     position: absolute;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     transition: transform 0.3s ease-in;
-    
-
+    z-index: 3;
+}
+#xis{
+    display: none;
 }
 .containeropcao{
+    white-space: nowrap;
+    word-break: keep-all;
     margin: 8px;
     list-style-type: none;
-    white-space: nowrap;
 }
-.containeropcao>a{
+.containeropcao>li>a{
     background-color: rgb(6, 89, 162);
     padding: 5px;
     color: white;
@@ -70,10 +76,11 @@ header{
     font-size: x-large;
     
 }
-.containeropcao>a:hover{
+.containeropcao>li>a:hover{
     background-color: rgb(100, 183, 255);
     transition-duration: 0.3s;
 }
+
 .carrossel{
     z-index: 1;
     top: 0px;
@@ -152,6 +159,7 @@ button.proximo{
     padding: 5px;
     border-radius: 5px;
 }
+
 @media (max-width:1000px) {
     .beneficio>img,.beneficio{
         display: none;
@@ -163,22 +171,47 @@ button.proximo{
         height: 60px;
     }
     #containermenu{
-        height: 500px;
-        width: 300px;
+        width: 90vw;
+        height:100vh;
         position: absolute;
-        left:150px;
-        transform: translateX(-200%);
+        transform: translateX(-101%);
         flex-direction: column;
         z-index: 2;
-        top: 20px;
+        top: 22px;
         padding: 0px;
-        background-color: #261B17;
-        align-items: center;
+        background-color: #ffffff;
+        left: 0;
+        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.346);
+        align-items: center;padding: 5px;
         
     }
+    .containeropcao{
+        margin: 15px;
+        text-align: center;
+        box-shadow: 0px 0px 1px black;
+        width: 100%;
+    }
+    .containeropcao>li{
+        
+        transition: transform 0.2s ease;
+    }
+    .containeropcao>li>a{
+        background-color:rgba(255, 255, 255, 0) ;
+        color: black;
+        
+    }
+    .containeropcao>li:hover{
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in-out;
+    }
+    #logomenu{
+        display: block;
+        position: relative;
+        width: 250px;
+    }
     #hamburguerimg{
+        display: block;
         position: absolute;
-        z-index: 3;
     }
     #carrinho{
         height: 50px;
@@ -187,6 +220,18 @@ button.proximo{
     header{
         height: 160px;
     }
+    #xis{
+        display: block;
+        position: fixed;
+        top: 10px;
+        z-index: 3;
+        right:  80vw;
+        height: 50px;
+        background-color: white;
+    }
+    #xis:hover{
+        cursor: pointer;
+    }
     
 }
 @media (max-width:375px) {
@@ -194,7 +239,7 @@ button.proximo{
         height: 50px;
     }
     #carrinho{
-        height: 30px;
+        height: 40px;
         
     }
     .beneftelasmenores{
@@ -204,10 +249,20 @@ button.proximo{
     header{
         height: 130px;
     }
+    #logomenu{
+        width: 180px;
+    }
+    #xis{
+        left: 15px;
+    }
+    #hamburguerimg{
+        height: 40px;
+    }
     
 }
+
 #containermenu.active{
-    transform: translateX(-50%);
+    transform: translateX(0%);
 }
 #textoofertas{
     text-align: center;
